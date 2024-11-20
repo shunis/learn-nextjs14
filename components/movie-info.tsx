@@ -1,11 +1,10 @@
 import styles from "../styles/movie-info.module.css";
-import { API_URL } from "../app/(home)/page";
 
 export async function getMovie(id: string) {
     console.log(`Fetching video : ${Date.now()}`);
     await new Promise((resolve) => setTimeout(resolve, 4000));
 
-    const response = await fetch(`${API_URL}/${id} `);
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/${id} `);
     return response.json();
 }
 

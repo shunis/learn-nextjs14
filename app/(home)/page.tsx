@@ -6,12 +6,10 @@ export const metadata = {
     title: "Home",
 };
 
-export const API_URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
-
 async function getMovies() {
     //await new Promise((resolve) => setTimeout(resolve, 1000));
     // console.log("fetch!!!!");
-    const response = await fetch(API_URL);
+    const response = await fetch(process.env.NEXT_PUBLIC_API_URL);
     const json = await response.json();
     return json;
 }

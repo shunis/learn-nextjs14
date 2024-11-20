@@ -4,6 +4,8 @@
 /out
 *.pem
 
+.env.local
+
 # dependencies
 /node_modules
 /.pnp

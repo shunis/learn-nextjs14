@@ -1,4 +1,5 @@
 import styles from "../styles/movie-videos.module.css";
+export const dynamic = "force-dynamic";
 
 async function getVideo(id: string) {
     // console.log(`Fetching video : ${Date.now()}`);
